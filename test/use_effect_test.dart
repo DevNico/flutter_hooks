@@ -7,7 +7,7 @@ import 'mock.dart';
 void main() {
   final effect = MockEffect();
   final unrelated = MockWidgetBuild();
-  List<Object>? parameters;
+  List<Object?>? parameters;
 
   Widget builder() {
     return HookBuilder(builder: (context) {
@@ -198,7 +198,7 @@ void main() {
   testWidgets('useEffect disposer called whenever callback called',
       (tester) async {
     final effect = MockEffect();
-    List<Object>? parameters;
+    List<Object?>? parameters;
 
     Widget builder() {
       return HookBuilder(builder: (context) {
