@@ -225,7 +225,7 @@ StreamController<T> useStreamController<T>(
     {bool sync = false,
     VoidCallback? onListen,
     VoidCallback? onCancel,
-    List<Object>? keys}) {
+    List<Object?>? keys}) {
   return use(_StreamControllerHook(
     onCancel: onCancel,
     onListen: onListen,
@@ -236,7 +236,7 @@ StreamController<T> useStreamController<T>(
 
 class _StreamControllerHook<T> extends Hook<StreamController<T>> {
   const _StreamControllerHook(
-      {this.sync = false, this.onListen, this.onCancel, List<Object>? keys})
+      {this.sync = false, this.onListen, this.onCancel, List<Object?>? keys})
       : super(keys: keys);
 
   final bool sync;
